@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Running error handelrs and users signup
     $signup->signupUser();
 
-    //$userId = $signup->fetchUserId($uid);
+    $userUidd = $signup->fetchUserUuid($login);
 
     // Instantiate ProfileInfoContr class
     //include "../classes/profileinfo.class.php";

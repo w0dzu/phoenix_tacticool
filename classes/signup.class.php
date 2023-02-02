@@ -17,9 +17,6 @@ class Signup extends Dbh {
         $stmt = null;
     }
 
-    //TODO
-    protected function getUser($uuid) {}
-
     protected function checkUserOrEmail($login, $email) {
         $sql = 'SELECT user_login FROM users WHERE user_login = ? OR user_email = ?;';
         $stmt = $this->connect()->prepare($sql);
@@ -37,5 +34,27 @@ class Signup extends Dbh {
         $result = false;
         $stmt = null;
         return $result;
+    }
+
+    protected function getUserUuid($login) {
+        $sql = 'SELECT user_uuid FROM users WHERE user_login = ?;';
+        $stmt = $this->connect()->prepare($sql);
+        
+        if (!$stmt->execute(array($login))) {
+            $stmt = null;
+            header("location: profile.php?error=stmtfailed");
+            exit();
+        }
+
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+            header("location: profile.php?error=usernotfound");
+            exit();
+        }
+
+        $result = $stmt->fetchAll();
+        $uuid = $result[0]["user_uuid"];
+
+        return $uuid;
     }
 }
