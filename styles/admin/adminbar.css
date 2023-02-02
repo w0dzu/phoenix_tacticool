@@ -1,0 +1,86 @@
+nav.adminbar {
+    background-color: #1d2327;
+    height: 2rem;
+}
+
+nav.adminbar img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto;
+}
+
+nav.adminbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav.adminbar p {
+    float: left;
+    margin: 0 0.5rem 0 0;
+}
+
+nav.adminbar li {
+    margin: 0;
+    float: left;
+}
+
+nav.adminbar a {
+    line-height: 1.5rem;
+    float: right;
+    height: 1.5rem;
+    padding: .25rem .5rem .25rem .5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav.adminbar a.logo {
+    padding: .25rem;
+}
+
+nav.adminbar a:hover {
+    background-color: #2C3338;
+    color: #5AAECD;
+
+}
+
+nav.adminbar a:hover div.user-profile{
+    display: table;
+}
+
+div.user-profile {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 15rem;
+    padding: 1rem;
+    z-index: 99;
+    background-color: #2C3338;
+}
+
+div.user-profile img {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    float: left;
+}
+
+div.user-profile ul {
+    display: table-cell;
+
+}
+
+div.user-profile li {
+    width: 100%;
+    margin-top: auto;
+    
+}
+
+div.btn {
+    float: right;
+    height: 2rem;
+}
+
+div.btn:hover div.user-profile{
+     display: block;
+}
