@@ -1,0 +1,70 @@
+main.login {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22.5rem;
+
+    
+}
+
+div.login {
+    border-top: 0.125rem solid #cc101f;
+    border-bottom: 0.125rem solid #cc101f;
+    background-color: #0F0F0F;
+}
+
+main.login img.login, a.login {
+    display: block;
+    width: 11rem;
+    margin: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main.login h1 {
+    text-align: center;
+    padding: 0 0 1rem 0 ;
+    border-bottom: 0.1rem solid #757575;
+}
+
+main.login h5 {
+    text-align: center;
+    padding: 1rem 0 0 0;
+    border-top: 0.1rem solid #757575;
+}
+
+main.login form {
+    padding:  0 1.5rem;
+    box-sizing: border-box;
+}
+
+main.login input[type=text],[type=password],[type=submit] {
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 0;
+    width: 100%;
+    padding: .75rem;
+    margin: .5rem 0 .5rem 0;
+    font-size: 1.5rem;
+/*
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+*/
+}
+
+main.login input[type=submit]:hover {
+    background-color: #757575;
+    font-weight: 600;
+}
+
+div.options {
+    padding: .75rem;
+    margin: .5rem 0 .5rem 0;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+div.options a {
+    float: right;
+}
