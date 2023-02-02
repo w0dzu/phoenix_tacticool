@@ -3,6 +3,7 @@
 @import "components/footer.css";
 @import "content.css";
 @import "login.css";
+@import "signup.css";
 @import "admin/adminbar.css";
 :root {
     --bg-color: #1a1a1a;

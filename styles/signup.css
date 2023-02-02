@@ -1,4 +1,4 @@
-main.login {
+main.signup {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -7,13 +7,13 @@ main.login {
     
 }
 
-div.login {
+div.signup {
     border-top: 0.125rem solid #cc101f;
     border-bottom: 0.125rem solid #cc101f;
     background-color: #0F0F0F;
 }
 
-main.login img.login, a.login {
+main.signup img.signup, a.signup {
     display: block;
     width: 11rem;
     margin: 2rem;
@@ -21,24 +21,24 @@ main.login img.login, a.login {
     margin-right: auto;
 }
 
-main.login h1 {
+main.signup h1 {
     text-align: center;
     padding: 0 0 1rem 0 ;
     border-bottom: 0.1rem solid #757575;
 }
 
-main.login h5 {
+main.signup h5 {
     text-align: center;
     padding: 1rem 0 0 0;
     border-top: 0.1rem solid #757575;
 }
 
-main.login form {
+main.signup form {
     padding:  0 1.5rem;
     box-sizing: border-box;
 }
 
-main.login input[type=text],[type=password],[type=submit] {
+main.signup input[type=text],[type=password],[type=submit] {
     background-color: #fff;
     box-sizing: border-box;
     border: 0;
@@ -53,12 +53,12 @@ main.login input[type=text],[type=password],[type=submit] {
 */
 }
 
-main.login input[type=submit]{
+main.signup input[type=submit]{
     background-color: #757575;
     color: #fff;
 }
 
-main.login input[type=submit]:hover{
+main.signup input[type=submit]:hover{
     background-color: #cc101f;
 }
 
