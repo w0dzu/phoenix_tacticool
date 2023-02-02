@@ -28,7 +28,7 @@
 <a class="login" href="index.php"><img class="login"src="images/phoenix-tactical-logo.png" alt="LG"></a>
     <div class="login">
         <h1>LOGIN</h1>
-        <form action="inc/login.inc.php" method="post">
+        <form action="includes/login.inc.php" method="post">
             <input type="text" name="login" id="login" placeholder="Username or Email">
             <input type="password" name="pwd" id="pwd"  placeholder="Password">
             <div class="options">

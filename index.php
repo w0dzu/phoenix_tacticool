@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
     
     $GLOBALS['url']  = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -23,8 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php 
-    //include 'admin/adminbar.php';
+<?php
+    if (isset($_SESSION['user_login'])) {
+        include 'admin/adminbar.php';
+    }
     include 'components/header.php';
 ?>
 <main>

@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="#">Username</a></li>
                 <li><a href="#">Edit profile</a></li>
-                <li><a href="<?php echo $url . "includes/logout.inc.php"?>">Logout</a></li>
+                <li><a href="includes/logout.inc.php">Logout</a></li>
             </ul>
         </div>
     </div>
