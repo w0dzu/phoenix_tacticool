@@ -18,7 +18,7 @@
 <a class="signup" href="index.php"><img class="signup"src="images/phoenix-tactical-logo.png" alt="LG"></a>
     <div class="login">
         <h1>SIGNUP</h1>
-        <form action="inc/signup.inc.php" method="post">
+        <form action="includes/signup.inc.php" method="post">
             <input type="text" name="login" id="login" placeholder="Login">
             <input type="text" name="email" id="email" placeholder="Email">
             <input type="password" name="pwd" id="pwd"  placeholder="Password">

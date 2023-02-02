@@ -1,7 +1,7 @@
 <header>
     <div class="header">
         <div class="logo">
-            <a href="#"><img src="<?php echo $url . "images/phoenix-tactical-logo.png"?>" alt="LOGO"></a>
+            <a href="#"><img src="images/phoenix-tactical-logo.png" alt="LOGO"></a>
         </div>
         <div class="title">
             <a href="#"><p>PHOENIX TACTICOOL</p></a>
