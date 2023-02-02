@@ -19,13 +19,13 @@
     <div class="login">
         <h1>SIGNUP</h1>
         <form action="inc/signup.inc.php" method="post">
-            <input type="text" name="usr" id="usr" placeholder="Login">
+            <input type="text" name="login" id="login" placeholder="Login">
             <input type="text" name="email" id="email" placeholder="Email">
             <input type="password" name="pwd" id="pwd"  placeholder="Password">
             <input type="password" name="pwdrepeat" id="pwdrepeat"  placeholder="Repeat Password">
             <div class="options">
             </div>
-            <input type="submit" value="Signup">
+            <input type="submit" value="SIGNUP">
         </form>
         <h5>You have an account? <a href="login.php">Login</a></h5>
     </div>

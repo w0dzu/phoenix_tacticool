@@ -30,13 +30,13 @@
         <h1>LOGIN</h1>
         <form action="inc/login.inc.php" method="post">
             <input type="text" name="login" id="login" placeholder="Username or Email">
-            <input type="password" name="pass" id="pass"  placeholder="Password">
+            <input type="password" name="pwd" id="pwd"  placeholder="Password">
             <div class="options">
                 <input type="checkbox" name="remember" id="remember">
                 <label for="remmber">Remember me</label>
                 <a href="">Forgot Password?</a>
             </div>
-            <input type="submit" value="Login">
+            <input type="submit" value="LOGIN">
         </form>
         <h5>Don't have an account? <a href="signup.php">Signup</a></h5>
     </div>

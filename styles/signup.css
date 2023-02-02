@@ -54,12 +54,12 @@ main.signup input[type=text],[type=password],[type=submit] {
 }
 
 main.signup input[type=submit]{
-    background-color: #757575;
+    background-color: #cc101f;
     color: #fff;
 }
 
 main.signup input[type=submit]:hover{
-    background-color: #cc101f;
+    background-color: #FF1428;
 }
 
 div.options {
