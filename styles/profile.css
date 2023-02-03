@@ -1,0 +1,168 @@
+main.userProfile {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+}
+
+aside.profileSidebar {
+    width: 54mm;
+    height: 86mm;
+    margin: .5rem;
+}
+
+main.profileMain {
+    flex-grow: 1;
+    margin: .5rem;
+}
+
+nav.profileNavbar {
+    text-align: center;
+    height: 3rem;
+    background-color: #4A5568;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+nav.profileNavbar ul {
+    height: calc(100% - 0.5rem);
+    margin: 0;
+    padding: .5rem .5rem 0 .5rem;
+    display: flex;
+}
+
+nav.profileNavbar li {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    justify-content: space-around;
+}
+
+nav.profileNavbar li a {
+    text-decoration: none;
+    height: 2.5rem;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    display: block;
+    text-align: center;
+    line-height: 2.5rem;
+    padding: 0 1rem 0 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+nav.profileNavbar a:hover {
+    background-color: #535E70;
+    color: #F7FAFE;
+}
+
+section.profileContent {
+    height: 34rem;
+    padding: 0.5rem;
+    display: none;
+    background-color: #2D3037;
+}
+
+div.profileId {
+    width: 54mm;
+    height: 86mm;
+    border-radius: 3.15mm;
+    background-color: #2D3037;
+}
+
+div.profileIdChild {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 2.5mm;
+    padding-left: 2.5mm;
+    padding-right: 2.5mm;
+}
+
+div.profileIdImage {
+    height: 34mm;
+}
+
+div.profileIdBottom {
+    padding-bottom: 2.5mm;
+}
+
+div.profileIdImage div {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 31.5mm;
+    float: left;
+    text-align: center;
+}
+
+div.profileId img.profileImage {
+    width: 24.5mm;
+    height: 31.5mm;
+}
+
+div.profileId img.profileLogo {
+    width: auto;
+    height: 50%;
+}
+
+div.profileIdName {
+    height: 21.75mm;
+}
+
+div.profileIdName div {
+    width: 50%;
+    height: 21.75mm;
+    margin: 0;
+    float: left;
+}
+
+div.profileIdImage p {
+    margin: 0;
+    padding: 0;
+}
+
+div.profileIdChild h6, h5 {
+    margin: 0;
+}
+
+div.profileIdChild h5 {
+    padding: .25rem 0 .25rem .5rem;
+}
+div.profileIdChild h6 {
+    color: #535E70;
+}
+
+div.profileIdIssue {
+    height: 21.75mm;
+    position: relative;
+}
+div.profileIdIssue img{
+    width: 21.75mm;
+    height: 21.75mm;
+    display: block;
+    position: absolute;
+    right: +2.5mm;
+    bottom: 0;
+}
+div.profileIdIssue div.expdate {
+    width: 48%;
+    height: 1.25rem;
+    background-color: #111213;
+}
+
+div.profileIdBottom {
+    text-align: center;
+    font-size: 0.70rem;
+}
+
+section.active {
+    display: block;
+}
+
+a.active {
+    background-color: #2D3037;
+}
+
+a.active:hover {
+    background-color: #2D3037;
+}

@@ -1,4 +1,4 @@
-<header>
+<header class="mainHeader">
     <div class="header">
         <div class="logo">
             <a href="#"><img src="images/phoenix-tactical-logo.png" alt="LOGO"></a>
