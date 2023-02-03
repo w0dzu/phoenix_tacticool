@@ -92,9 +92,13 @@ class SignupController extends Signup
         return $result;
     }
 
-    public function fetchUserUuid($login)
-    {
+    public function fetchUserUuid($login) {
         $uuid = $this->getUserUuid($login);
         return $uuid;
+    }
+
+    public function fetchUserId($login) {
+        $id = $this->getUserId($login);
+        return $id;
     }
 }

@@ -2,8 +2,7 @@
 
 class Signup extends Dbh {
 
-    protected function setUser($login, $email, $pwd)
-    {
+    protected function setUser($login, $email, $pwd) {
         $sql = 'INSERT INTO users (user_uuid, user_login, user_email, user_pwd) VALUES (UUID_SHORT(), ?,?,?);';
         $stmt = $this->connect()->prepare($sql);
 
@@ -56,5 +55,27 @@ class Signup extends Dbh {
         $uuid = $result[0]["user_uuid"];
 
         return $uuid;
+    }
+
+    protected function getUserId($login){
+        $sql = 'SELECT user_id FROM users WHERE user_login = ?;';
+        $stmt = $this->connect()->prepare($sql);
+        
+        if (!$stmt->execute(array($login))) {
+            $stmt = null;
+            header("location: profile.php?error=stmtfailed");
+            exit();
+        }
+
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+            header("location: profile.php?error=usernotfound");
+            exit();
+        }
+
+        $result = $stmt->fetchAll();
+        $id = $result[0]["user_id"];
+
+        return $id;
     }
 }

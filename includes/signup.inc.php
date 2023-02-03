@@ -19,13 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $signup->signupUser();
 
     $userUidd = $signup->fetchUserUuid($login);
+    $userId = $signup->fetchUserId($login);
 
-    // Instantiate ProfileInfoContr class
-    //include "../classes/profileinfo.class.php";
-    //include "../classes/profileinfo-contr.class.php";
+    // Instantiate ProfileController class
+    include "../classes/profile.class.php";
+    include "../classes/profileController.class.php";
 
-    //$profileInfo = new ProfileInfoController($userId, $uid);
-    //$profileInfo->defaultProfileInfo();
+    $profile = new ProfileController($userId);
+    $profile->setDefaultProfile();
     
 
     // Going to back to front page
