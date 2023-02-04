@@ -3,7 +3,7 @@
 class Profile extends Dbh {
 
     protected function setProfile($userId, $userAbout) {
-        $sql = 'INSERT INTO users_profile (user_id, user_about) VALUES (?, ?)';
+        $sql = 'INSERT INTO users_profile (user_uuid, user_about) VALUES (?, ?)';
         $stmt = $this->connect()->prepare($sql);
         
         if (!$stmt->execute(array($userId, $userAbout))) {
@@ -21,11 +21,11 @@ class Profile extends Dbh {
         $stmt = null;
     }
 
-    protected function getProfile ($userId) {
-        $sql = 'SELECT * FROM user_profile WHERE user_id = ?;';
+    protected function getProfile ($userUuid) {
+        $sql = 'SELECT * FROM users_profile WHERE user_uuid = ?;';
         $stmt = $this->connect()->prepare($sql);
         
-        if (!$stmt->execute(array($userId))) {
+        if (!$stmt->execute(array($userUuid))) {
             $stmt = null;
             header("location: profile.php?error=stmtfailed");
             exit();
@@ -37,7 +37,7 @@ class Profile extends Dbh {
             exit();
         }
 
-        $profile = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $profile = $stmt->fetchAll();
 
         return $profile;
     }

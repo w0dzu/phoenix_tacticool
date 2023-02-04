@@ -16,3 +16,7 @@ body {
     background-color: var(--bg-color);
     margin: 0;
 }
+
+.xdebug-error, .xe-warning {
+    color: #000;
+}

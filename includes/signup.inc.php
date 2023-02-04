@@ -18,14 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Running error handelrs and users signup
     $signup->signupUser();
 
-    $userUidd = $signup->fetchUserUuid($login);
+    $userUuid = $signup->fetchUserUuid($login);
     $userId = $signup->fetchUserId($login);
 
     // Instantiate ProfileController class
     include "../classes/profile.class.php";
     include "../classes/profileController.class.php";
 
-    $profile = new ProfileController($userId);
+    $profile = new ProfileController($userUuid);
     $profile->setDefaultProfile();
     
 
