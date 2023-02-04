@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+
+RewriteEngine on
+RewriteRule ^profile.([a-zA-z0-9-]+) profile.php?uuid=$1

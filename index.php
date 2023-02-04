@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
 
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="http://localhost/phoenix_tacticool/styles/main.css" type="text/css">
 
     <link rel="shortcut icon" href="images/phoenix-tactical-logo.png" type="image/x-icon">
 

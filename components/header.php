@@ -1,7 +1,7 @@
 <header class="mainHeader">
     <div class="header">
         <div class="logo">
-            <a href="#"><img src="images/phoenix-tactical-logo.png" alt="LOGO"></a>
+            <a href="#"><img src="http://localhost/phoenix_tacticool/images/phoenix-tactical-logo.png" alt="LOGO"></a>
         </div>
         <div class="title">
             <a href="#"><p>PHOENIX TACTICOOL</p></a>
