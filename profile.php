@@ -25,6 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script src="../../scripts/profileTab.js" defer></script>
 </head>
 <body>
 <?php
@@ -39,14 +41,14 @@
 
     $profile = new ProfileView();
 
-    //$profile->fetchProfileFirstname($uuid);
+    //var_dump($profile->fetchProfileImage($uuid));
 ?>
 <main class="userProfile">
     <aside class="profileSidebar">
         <div class="profileId">
             <div class="profileIdChild profileIdImage">
                 <div>
-                    <img class="profileImage" src="http://localhost/phoenix_tacticool/images/avatar.png" alt="avatar">
+                    <img class="profileImage" src="http://localhost/phoenix_tacticool/<?php $profile->fetchProfileImage($uuid)?>" alt="avatar">
                 </div>
                 <div>
                     <p><b>PHOENIX TACTICOOL</b></p>
@@ -66,7 +68,7 @@
             <div class="profileIdChild profileIdIssue">
                 <h6>Issue Date:</h6><h5>2000-JAN-01</h5>
                 <h6>Expiration Date:</h6><h5><div class="expdate"></div></h5>
-                <img src="http://localhost/phoenix_tacticool/images/qrcode.png" alt="QRCODE">
+                <img src="http://localhost/phoenix_tacticool/<?php $profile->fetchProfileQrcode($uuid)?>" alt="QRCODE">
             </div>
             <div class="profileIdChild profileIdBottom">
                 Phoenix Tacticool Identification Card
@@ -76,16 +78,31 @@
     <main class="profileMain">
         <nav class="profileNavbar">
             <ul>
-                <li><a class="active" href="?tab=overview">OVERVIEW</a></li>
-                <li><a href="?tab=trainings">TRAININGS</a></li>
-                <li><a href="?tab=operations">OPERATIONS</a></li>
-                <li><a href="?tab=media">MEDIA</a></li>
+                <li><a class="overview" href="?tab=overview">OVERVIEW</a></li>
+                <li><a class="trainings" href="?tab=trainings">TRAININGS</a></li>
+                <li><a class="operations" href="?tab=operations">OPERATIONS</a></li>
+                <li><a class="media" href="?tab=media">MEDIA</a></li>
             </ul>
         </nav>
-        <section class="profileContent active">overview</section>
-        <section class="profileContent ">trainings</section>
-        <section class="profileContent ">operations</section>
-        <section class="profileContent ">media</section>
+        <section class="profileContent overview">
+            <h1>ABOUT ME</h1>
+            <p><?php  $profile->fetchProfileAbout($uuid) ?></p>
+            <h1>STATISTICS</h1>
+            <div class="stats">
+                <div class="div1">Missions: <?php  $profile->fetchDataMissions($uuid);?></div>
+                <div class="div2">Trainings: <?php  $profile->fetchDataTrainings($uuid);?></div>
+                <div class="div3">Tvt: <?php  $profile->fetchDataTvt($uuid);?></div>
+                <div class="div4">RTB: <?php  $profile->fetchDataRtb($uuid);?></div>
+                <div class="div5">KIA: <?php  $profile->fetchDataKia($uuid);?></div>
+                <div class="div6">MIA: <?php  $profile->fetchDataMia($uuid);?></div>
+                <div class="div7">As PL: <?php  $profile->fetchDataPl($uuid);?></div>
+                <div class="div8">As SL: <?php  $profile->fetchDataSl($uuid);?></div>
+                <div class="div9">As TL: <?php  $profile->fetchDataTl($uuid);?></div>
+            </div>
+        </section>
+        <section class="profileContent trainings">trainings</section>
+        <section class="profileContent operations">operations</section>
+        <section class="profileContent media">media</section>
     </main>
 </main>
 <?php include 'components/footer.php';?>

@@ -2,11 +2,11 @@
 
 class Profile extends Dbh {
 
-    protected function setProfile($userId, $userAbout) {
-        $sql = 'INSERT INTO users_profile (user_uuid, user_about) VALUES (?, ?)';
+    protected function setProfile($userUuid, $userImage, $userQrcode, $userAbout) {
+        $sql = 'INSERT INTO users_profile (user_uuid, user_image, user_qrcode, user_about) VALUES (?, ?, ?, ?)';
         $stmt = $this->connect()->prepare($sql);
         
-        if (!$stmt->execute(array($userId, $userAbout))) {
+        if (!$stmt->execute(array($userUuid, $userImage, $userQrcode, $userAbout))) {
             $stmt = null;
             header("location: profile.php?error=stmtfailed");
             exit();
@@ -14,14 +14,14 @@ class Profile extends Dbh {
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header("location: profile.php?error=profilenotfound");
+            header("location: index.php?error=profilenotfound");
             exit();
         }
 
         $stmt = null;
     }
 
-    protected function getProfile ($userUuid) {
+    protected function getUserProfile ($userUuid) {
         $sql = 'SELECT * FROM users_profile WHERE user_uuid = ?;';
         $stmt = $this->connect()->prepare($sql);
         
@@ -33,7 +33,8 @@ class Profile extends Dbh {
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header("location: profile.php?error=profilenotfound");
+
+            header("location: ../index.php?error=profilenotfound");
             exit();
         }
 
@@ -112,5 +113,29 @@ class Profile extends Dbh {
             exit();
         }
         $stmt = null;
+    }
+
+    //TODO updateProfileQrcode
+
+    protected function getUserData ($userUuid) {
+        $sql = 'SELECT * FROM users_data WHERE user_uuid = ?;';
+        $stmt = $this->connect()->prepare($sql);
+        
+        if (!$stmt->execute(array($userUuid))) {
+            $stmt = null;
+            header("location: profile.php?error=stmtfailed");
+            exit();
+        }
+
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+
+            header("location: ../index.php?error=profilenotfound");
+            exit();
+        }
+
+        $profile = $stmt->fetchAll();
+
+        return $profile;
     }
 }
