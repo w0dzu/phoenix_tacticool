@@ -55,3 +55,20 @@ div.dropdown {
         display: block;
     }
 }
+
+div.loginBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.loginBox a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+div.loginBox a:hover {
+    background-color: #000;
+}

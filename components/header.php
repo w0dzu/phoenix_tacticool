@@ -9,4 +9,7 @@
         <div class="dropdown"><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></div>
     </div>
     <?php include 'navbar.php';?>
+    <div class="loginBox">
+        <a href="login.php">LOGIN</a>
+    </div>
 </header>
