@@ -64,3 +64,18 @@ div.social a:hover {
         text-align: center;
     }
 }
+
+/* 
+dc #8c9eff
+sm #37474f
+yt #ff3D00
+fb #039be5
+*/
+.socialIcon {
+    fill: #2D3037;
+}
+
+#discord:hover {
+    fill: #8c9eff;
+    background-image: linear-gradient(180deg, 2D3037, #8c9eff);
+}
