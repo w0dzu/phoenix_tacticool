@@ -18,6 +18,8 @@ footer ul {
 footer li {
     list-style: none;
     display: block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 footer p {
@@ -29,6 +31,7 @@ div.about a {
     text-decoration: underline rgba(26, 26, 26, 1);
     text-underline-offset: .25rem;
     transition: text-decoration-color .25s;
+    
 }
 
 div.about a:hover {
@@ -39,8 +42,9 @@ div.about a:hover {
 div.social a {
     text-decoration: none;
     color: #fff;
-    padding: 0.5rem;
     display: block;
+    width: 32px;
+    height: 32px;
     transition: transform .25s;
 }
 
@@ -72,10 +76,17 @@ yt #ff3D00
 fb #039be5
 */
 .socialIcon {
-    fill: #2D3037;
+    fill: #fff;
 }
-
 #discord:hover {
     fill: #8c9eff;
-    background-image: linear-gradient(180deg, 2D3037, #8c9eff);
+}
+#steam:hover {
+    fill: #37474f;
+}
+#youtube:hover {
+    fill: #ff3d00;
+}
+#facebook:hover {
+    fill: #039be5;
 }
