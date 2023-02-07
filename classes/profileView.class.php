@@ -1,6 +1,13 @@
 <?php
 
 class ProfileView extends Profile {
+
+    //users 
+    public function fetchUserLogin($userUuid) {
+        $user = $this->getUser($userUuid);
+
+        echo $user[0]["user_login"];
+    }
     
     //user_profile
     public function fetchProfileFirstname($userUuid) {

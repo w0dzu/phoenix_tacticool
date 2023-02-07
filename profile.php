@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <script src="../../scripts/profileTab.js" defer></script>
+    <script src="http://localhost/phoenix_tacticool/scripts/profileTab.js" defer></script>
 </head>
 <body>
 <?php
@@ -62,7 +62,7 @@
                     <h6>Lastname:</h6><h5><?php $profile->fetchProfileLastname($uuid);?></h5>
                 </div>
                 <div>
-                    <h6>Callsign:</h6><h5>JOHNNY BRAVO</h5>
+                    <h6>Callsign:</h6><h5><?php $profile->fetchUserLogin($uuid);?></h5>
                 </div>
             </div>
             <div class="profileIdChild profileIdIssue">
@@ -89,15 +89,15 @@
             <p><?php  $profile->fetchProfileAbout($uuid) ?></p>
             <h1>STATISTICS</h1>
             <div class="stats">
-                <div class="div1">Missions: <?php  $profile->fetchDataMissions($uuid);?></div>
-                <div class="div2">Trainings: <?php  $profile->fetchDataTrainings($uuid);?></div>
-                <div class="div3">Tvt: <?php  $profile->fetchDataTvt($uuid);?></div>
-                <div class="div4">RTB: <?php  $profile->fetchDataRtb($uuid);?></div>
-                <div class="div5">KIA: <?php  $profile->fetchDataKia($uuid);?></div>
-                <div class="div6">MIA: <?php  $profile->fetchDataMia($uuid);?></div>
-                <div class="div7">As PL: <?php  $profile->fetchDataPl($uuid);?></div>
-                <div class="div8">As SL: <?php  $profile->fetchDataSl($uuid);?></div>
-                <div class="div9">As TL: <?php  $profile->fetchDataTl($uuid);?></div>
+                <div class="statsChild div1">Missions: <span class="counter"><?php  $profile->fetchDataMissions($uuid);?></span></div>
+                <div class="statsChild div2">Trainings: <span class="counter"><?php  $profile->fetchDataTrainings($uuid);?></span></div>
+                <div class="statsChild div3">Tvt: <span class="counter"><?php  $profile->fetchDataTvt($uuid);?></span></div>
+                <div class="statsChild div4">RTB: <span class="counter"><?php  $profile->fetchDataRtb($uuid);?></span></div>
+                <div class="statsChild div5">KIA: <span class="counter"><?php  $profile->fetchDataKia($uuid);?></span></div>
+                <div class="statsChild div6">MIA: <span class="counter"><?php  $profile->fetchDataMia($uuid);?></span></div>
+                <div class="statsChild div7">As PL: <span class="counter"><?php  $profile->fetchDataPl($uuid);?></span></div>
+                <div class="statsChild div8">As SL: <span class="counter"><?php  $profile->fetchDataSl($uuid);?></span></div>
+                <div class="statsChild div9">As TL: <span class="counter"><?php  $profile->fetchDataTl($uuid);?></span></div>
             </div>
         </section>
         <section class="profileContent trainings">trainings</section>

@@ -138,4 +138,26 @@ class Profile extends Dbh {
 
         return $profile;
     }
+
+    protected function getUser($userUuid) {
+        $sql = 'SELECT * FROM users WHERE user_uuid = ?;';
+        $stmt = $this->connect()->prepare($sql);
+        
+        if (!$stmt->execute(array($userUuid))) {
+            $stmt = null;
+            header("location: profile.php?error=stmtfailed");
+            exit();
+        }
+
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+
+            header("location: ../index.php?error=profilenotfound");
+            exit();
+        }
+
+        $profile = $stmt->fetchAll();
+
+        return $profile;
+    }
 }

@@ -180,7 +180,8 @@ div.stats {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0.125rem;
-    grid-row-gap: 0.125rem; 
+    grid-row-gap: 0.25rem;
+    text-align: center;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -191,4 +192,15 @@ div.stats {
 .div6 { grid-area: 2 / 3 / 3 / 4; }
 .div7 { grid-area: 3 / 1 / 4 / 2; }
 .div8 { grid-area: 3 / 2 / 4 / 3; }
-.div9 { grid-area: 3 / 3 / 4 / 4; } 
+.div9 { grid-area: 3 / 3 / 4 / 4; }
+
+div.stats span {
+    text-align: center;
+    display: block;
+    font-size: 2.5rem;
+    color: #a03300;
+}
+
+div.statsChild {
+
+}
